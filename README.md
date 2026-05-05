@@ -96,7 +96,7 @@ Each example below is a single file. Open the source link to see the constants y
 
 ### 1. Animate Content Size
 
-![image](video/1.gif)
+<img src="video/1.gif" width="100%"/>
 
 Expandable card that morphs height between two `Dp` values. Uses `animateDpAsState` with `tween` so the unfold timing reads as a single curve.
 
@@ -106,7 +106,7 @@ Expandable card that morphs height between two `Dp` values. Uses `animateDpAsSta
 
 ### 2. Animated Visibility
 
-![image](video/2.gif)
+<img src="video/2.gif" width="100%"/>
 
 Enter and exit transitions composed from `slideIn`, `fadeIn`, `scaleIn`. A toggle flips the visibility, the spec defines the choreography.
 
@@ -116,7 +116,7 @@ Enter and exit transitions composed from `slideIn`, `fadeIn`, `scaleIn`. A toggl
 
 ### 3. Color State Morph
 
-![image](video/3.gif)
+<img src="video/3.gif" width="100%"/>
 
 `animateColorAsState` walking through a palette of named theme colors. Pick a swatch, the background and accents follow.
 
@@ -126,7 +126,7 @@ Enter and exit transitions composed from `slideIn`, `fadeIn`, `scaleIn`. A toggl
 
 ### 4. FAB Spring Morph
 
-![image](video/4.gif)
+<img src="video/4.gif" width="100%"/>
 
 A floating action button that grows, rotates, and shifts color when toggled. Scale, corner radius, rotation, and color all run through `animateAsState` with `spring`.
 
@@ -136,7 +136,7 @@ A floating action button that grows, rotates, and shifts color when toggled. Sca
 
 ### 5. Animated Counter
 
-![image](video/5.gif)
+<img src="video/5.gif" width="100%"/>
 
 A number counter that slides and fades between values using `AnimatedContent`. The transition direction follows whether the count went up or down.
 
@@ -146,7 +146,7 @@ A number counter that slides and fades between values using `AnimatedContent`. T
 
 ### 6. Crossfade Switcher
 
-![image](video/6.gif)
+<img src="video/6.gif" width="100%"/>
 
 `Crossfade` between three selectable panels. The animation spec controls how snappy or lazy the swap feels.
 
@@ -156,7 +156,7 @@ A number counter that slides and fades between values using `AnimatedContent`. T
 
 ### 7. Pulsing Heart
 
-![image](video/7.gif)
+<img src="video/7.gif" width="100%"/>
 
 `rememberInfiniteTransition` driving scale and alpha at the same time. The result is a soft heartbeat with a bright on, dim off rhythm.
 
@@ -166,7 +166,7 @@ A number counter that slides and fades between values using `AnimatedContent`. T
 
 ### 8. Custom Loading Spinner
 
-![image](video/8.gif)
+<img src="video/8.gif" width="100%"/>
 
 A loading indicator built from infinite rotation plus a color sweep. Shows how to layer two infinite transitions on the same `graphicsLayer`.
 
@@ -176,7 +176,7 @@ A loading indicator built from infinite rotation plus a color sweep. Shows how t
 
 ### 9. Spring Drag Box
 
-![image](video/9.gif)
+<img src="video/9.gif" width="100%"/>
 
 A box you can drag with `pointerInput`, then release to spring back to origin via `Animatable.animateTo`. Tuning stiffness flips the feel between snap and wobble.
 
@@ -186,7 +186,7 @@ A box you can drag with `pointerInput`, then release to spring back to origin vi
 
 ### 10. Easing Showcase
 
-![image](video/10.gif)
+<img src="video/10.gif" width="100%"/>
 
 Six runners race side by side, each using a different `Easing`. The strip makes the difference between linear, ease in, ease out, fast out slow in, anticipate, overshoot visible at a glance.
 
@@ -196,7 +196,7 @@ Six runners race side by side, each using a different `Easing`. The strip makes 
 
 ### 11. Play / Pause Morph
 
-![image](video/11.gif)
+<img src="video/11.gif" width="100%"/>
 
 A play triangle that morphs into a pause pair through `Path` interpolation on a `Canvas`. The shape itself is the animation, no sprite swap.
 
@@ -206,7 +206,7 @@ A play triangle that morphs into a pause pair through `Path` interpolation on a 
 
 ### 12. Shared Bounds Expansion
 
-![image](video/12.gif)
+<img src="video/12.gif" width="100%"/>
 
 Tap a card and watch it expand into a detail view through `SharedTransitionLayout`. Matching keys on the source and destination tie their bounds together.
 
@@ -216,7 +216,7 @@ Tap a card and watch it expand into a detail view through `SharedTransitionLayou
 
 ### 13. Swipeable Cards
 
-![image](video/13.gif)
+<img src="video/13.gif" width="100%"/>
 
 A Tinder style card stack. Drag past the threshold and the card flings off, tilted by a rotation factor proportional to the offset.
 
@@ -226,7 +226,7 @@ A Tinder style card stack. Drag past the threshold and the card flings off, tilt
 
 ### 14. Radial FAB Menu
 
-![image](video/14.gif)
+<img src="video/14.gif" width="100%"/>
 
 A floating action button that explodes into satellite buttons along an arc. Each satellite has its own `Animatable`, animated through a spring with a per index stagger delay so the menu unfurls and refolds.
 
@@ -236,7 +236,7 @@ A floating action button that explodes into satellite buttons along an arc. Each
 
 ### 15. 3D Card Flip
 
-![image](video/15.gif)
+<img src="video/15.gif" width="100%"/>
 
 A card that flips in 3D using `graphicsLayer.rotationY` with a tuned `cameraDistance`. The front and back swap content at 90 degrees.
 
@@ -246,7 +246,7 @@ A card that flips in 3D using `graphicsLayer.rotationY` with a tuned `cameraDist
 
 ### 16. Confetti Burst
 
-![image](video/16.gif)
+<img src="video/16.gif" width="100%"/>
 
 Tap anywhere in the canvas and a one shot burst of rotating paper rectangles erupts from that point. Each piece carries its own velocity, rotation speed, lateral wobble, lifetime, and color. Multiple bursts stack on top of each other.
 
@@ -256,7 +256,7 @@ Tap anywhere in the canvas and a one shot burst of rotating paper rectangles eru
 
 ### 17. Wave Field
 
-![image](video/17.gif)
+<img src="video/17.gif" width="100%"/>
 
 Multiple sine wave layers stacked for parallax, each driven by its own phase, frequency, and amplitude ramps. Looks like a calm sea or a storm depending on the constants.
 
@@ -266,7 +266,7 @@ Multiple sine wave layers stacked for parallax, each driven by its own phase, fr
 
 ### 18. Metaball Liquid
 
-![image](video/18.gif)
+<img src="video/18.gif" width="100%"/>
 
 Drifting blobs that fuse into a single liquid mass when they overlap. The fusion comes from additive blend on stacked radial gradients.
 
@@ -276,7 +276,7 @@ Drifting blobs that fuse into a single liquid mass when they overlap. The fusion
 
 ### 19. Mesh Aurora
 
-![image](video/19.gif)
+<img src="video/19.gif" width="100%"/>
 
 Color orbs orbit on elliptical paths, additive blended into a living mesh gradient. Hue rotation cycles the entire palette over time.
 
@@ -286,7 +286,7 @@ Color orbs orbit on elliptical paths, additive blended into a living mesh gradie
 
 ### 20. Pendulum Wave
 
-![image](video/20.gif)
+<img src="video/20.gif" width="100%"/>
 
 N pendulums with progressively shorter periods. They start in phase, drift apart into apparent chaos, and resync at the period boundary.
 
@@ -296,7 +296,7 @@ N pendulums with progressively shorter periods. They start in phase, drift apart
 
 ### 21. Rainy
 
-![image](video/21.gif)
+<img src="video/21.gif" width="100%"/>
 
 Continuous rain streaks falling at an angle, with depth based parallax and optional ground splash marks.
 
