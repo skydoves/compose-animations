@@ -48,9 +48,9 @@ import androidx.compose.ui.unit.dp
 fun AnimationExample8() {
   val ROTATION_DURATION_MS = 1400 // spin speed
   val SWEEP_DURATION_MS = 1200
-  val SPINNER_COLOR = Color(0xFF5591F2) // try any color
-  val SPINNER_STROKE_DP = 9.dp
-  val SPINNER_SIZE_DP = 123.dp
+  val SPINNER_COLOR = Color(0xFF1A94D2) // try any color
+  val SPINNER_STROKE_DP = 15.dp
+  val SPINNER_SIZE_DP = 163.dp
   val SWEEP_MIN = 10f
   val SWEEP_MAX = 290f
 
