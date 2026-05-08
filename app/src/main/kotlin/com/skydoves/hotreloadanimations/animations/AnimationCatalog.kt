@@ -175,8 +175,14 @@ object AnimationCatalog {
       accent = Color(0xFF4FC3F7),
       content = { AnimationExample21() },
     ),
+    AnimationEntry(
+      id = 22,
+      title = "Soap Bubble Drag",
+      subtitle = "Drag the bubble up to morph the layout, tap to pop. Thin-film interference + Schlick Fresnel in AGSL, kinematic spring deformation. Tweak radii and spring values in Kotlin or AGSL constants in the shader.",
+      accent = Color(0xFFB388FF),
+      content = { AnimationExample22() },
+    ),
   )
 
-  fun find(id: Int): AnimationEntry =
-    entries.firstOrNull { it.id == id } ?: entries.first()
+  fun find(id: Int): AnimationEntry = entries.firstOrNull { it.id == id } ?: entries.first()
 }

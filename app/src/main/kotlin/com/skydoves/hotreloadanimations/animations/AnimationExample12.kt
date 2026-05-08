@@ -101,8 +101,10 @@ fun AnimationExample12() {
       AnimatedContent(
         targetState = selectedId,
         transitionSpec = {
-          (fadeIn(tween(BOUNDS_DURATION_MS, easing = BOUNDS_EASING)) togetherWith
-            fadeOut(tween(BOUNDS_DURATION_MS, easing = BOUNDS_EASING)))
+          (
+            fadeIn(tween(BOUNDS_DURATION_MS, easing = BOUNDS_EASING)) togetherWith
+              fadeOut(tween(BOUNDS_DURATION_MS, easing = BOUNDS_EASING))
+            )
         },
         label = "shared-bounds",
       ) { current ->

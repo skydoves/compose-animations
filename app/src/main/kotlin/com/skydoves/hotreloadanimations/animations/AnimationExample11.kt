@@ -142,5 +142,4 @@ private fun PlayPauseMorph(progress: Float, iconBoxDp: Int) {
   }
 }
 
-private fun lerp(start: Float, end: Float, fraction: Float): Float =
-  start + (end - start) * fraction
+private fun lerp(start: Float, end: Float, fraction: Float): Float = start + (end - start) * fraction

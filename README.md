@@ -329,6 +329,19 @@ Continuous rain streaks falling at an angle, with depth based parallax and optio
 - **Article:** [Rainy](https://doveletter.dev/docs/compose-animations/rainy). Recycles a fixed pool of `Drop` objects advanced by `velocity * dt`, with per-drop speed encoding depth parallax, direction taken from `cos`/`sin` of a single `ANGLE_DEG`, and optional splash circles marking ground contact.
 
 
+### 22. Soap Bubble Drag
+
+<img src="video/22.gif" width="100%"/>
+
+Drag a bubble up to morph the layout, tap to pop. An AGSL `RuntimeShader` paints thin-film interference and Schlick Fresnel highlights, while a kinematic spring deforms the orb against the drag velocity. Flip `LOOK_PRESET` for alternative palettes (slime, neon, fire, ghost) without touching the shader.
+
+> **Credits:** Original soap-bubble physics and AGSL thin-film shader by [Kyriakos Georgiopoulos](https://gist.github.com/Kyriakos-Georgiopoulos/8d76b6ba97aea70762420bd88ed6dc4f). This sample adapts the source into a bounded catalog card with all tunables (radii, springs, durations, theme colors, AGSL constants) hoisted into local `val`s so HotSwan literal patching and `remember(SHADER_SRC)` keying make the whole sample hot-reloadable.
+
+- **Try tweaking:** `LOOK_PRESET`, `MAX_ORB_RADIUS_DP`, `SPRING_STIFFNESS`, `SPRING_DAMPING`, `DEFORMATION_FACTOR`, plus AGSL constants like `THICKNESS_BASE`, `COLOR_INTENSITY`, `ENV_REFLECTION_STRENGTH` inside the shader source.
+- **Source:** [`AnimationExample22.kt`](app/src/main/kotlin/com/skydoves/hotreloadanimations/animations/AnimationExample22.kt)
+- **Article:** [Soap Bubble Drag](https://doveletter.dev/docs/compose-animations/soap-bubble-drag). Drives an AGSL thin-film shader through `RuntimeShader` uniforms keyed off the source string in `remember(SHADER_SRC)` so hot-reload picks up shader edits, with kinematic spring physics translating drag velocity into per-frame `deformation` uniforms feeding the orb's distortion.
+
+
 ## [Tuning Compose Animations Without Rebuilding: Hot Reload for Dynamic Design](https://hotswan.dev/blog/compose-animation-hot-reload)
 
 ![image](video/cover.png)

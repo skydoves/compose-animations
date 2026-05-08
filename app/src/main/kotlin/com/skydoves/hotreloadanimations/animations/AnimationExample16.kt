@@ -68,21 +68,21 @@ private class Confetti(
 
 @Composable
 fun AnimationExample16() {
-  val BURST_COUNT = 70             // particles per tap
-  val GRAVITY = 1100f              // px/sec², 200 (moon) ↔ 3000 (snappy)
+  val BURST_COUNT = 70 // particles per tap
+  val GRAVITY = 1100f // px/sec², 200 (moon) ↔ 3000 (snappy)
   val SPEED_MIN = 700f
   val SPEED_MAX = 1500f
-  val LAUNCH_ANGLE_DEG = -90f      // -90 = straight up, 0 = right
-  val SPREAD_DEG = 110f             // narrower = jet, wider = burst
+  val LAUNCH_ANGLE_DEG = -90f // -90 = straight up, 0 = right
+  val SPREAD_DEG = 110f // narrower = jet, wider = burst
   val LIFETIME_MS_MIN = 1400f
   val LIFETIME_MS_MAX = 2600f
-  val AIR_DRAG = 1.4f              // 0 (no drag) ↔ 4 (heavy drift down)
-  val WOBBLE_AMP = 90f              // lateral flutter strength (px/sec)
-  val WOBBLE_FREQ = 0.006f         // flutter rhythm
-  val ROT_SPEED_MAX = 720f         // deg/sec
+  val AIR_DRAG = 1.4f // 0 (no drag) ↔ 4 (heavy drift down)
+  val WOBBLE_AMP = 90f // lateral flutter strength (px/sec)
+  val WOBBLE_FREQ = 0.006f // flutter rhythm
+  val ROT_SPEED_MAX = 720f // deg/sec
   val PARTICLE_W_DP = 7f
   val PARTICLE_H_DP = 14f
-  val FADE_OUT_FRACTION = 0.3f     // last 30% of life fades to alpha 0
+  val FADE_OUT_FRACTION = 0.3f // last 30% of life fades to alpha 0
   val PALETTE = listOf(
     Color(0xFFFF5252),
     Color(0xFFFFEB3B),
@@ -187,7 +187,8 @@ fun AnimationExample16() {
           },
       ) {
         // Subscribe to per-frame redraws.
-        @Suppress("UNUSED_EXPRESSION") frameNanos
+        @Suppress("UNUSED_EXPRESSION")
+        frameNanos
         for (p in particles) {
           val lifeFraction = (1f - p.ageMs / p.lifetimeMs).coerceIn(0f, 1f)
           val alpha = if (lifeFraction < FADE_OUT_FRACTION) {

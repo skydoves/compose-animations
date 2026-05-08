@@ -70,7 +70,8 @@ fun ExampleScreen(entry: AnimationEntry, onBack: () -> Unit) {
             PaddingValues(
               start = 16.dp,
               end = 16.dp,
-              bottom = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding() + 24.dp,
+              bottom =
+              WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding() + 24.dp,
             ),
           ),
       ) {

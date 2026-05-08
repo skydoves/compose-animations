@@ -46,8 +46,8 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun AnimationExample15() {
   val FLIP_DURATION_MS = 700
-  val FLIP_EASING = FastOutSlowInEasing  // try EaseInOutCubic
-  val CAMERA_DISTANCE_FACTOR = 12f  // lower = more dramatic perspective
+  val FLIP_EASING = FastOutSlowInEasing // try EaseInOutCubic
+  val CAMERA_DISTANCE_FACTOR = 12f // lower = more dramatic perspective
 
   val FRONT_COLOR = Color(0xFFE91E63)
   val BACK_COLOR = Color(0xFFFF7043)

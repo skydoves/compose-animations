@@ -45,16 +45,16 @@ import kotlin.random.Random
 
 @Composable
 fun AnimationExample21() {
-  val DROP_COUNT = 100                   // 40 (drizzle) ↔ 500 (downpour)
-  val ANGLE_DEG = 100f                   // 90 = straight down, 135 = strong left slant; 95 to 120 looks like wind blown rain
-  val SPEED_MIN_DP_PER_SEC = 180f        // slowest drop (parallax depth)
-  val SPEED_MAX_DP_PER_SEC = 360f        // fastest drop (foreground)
+  val DROP_COUNT = 100 // 40 (drizzle) ↔ 500 (downpour)
+  val ANGLE_DEG = 100f // 90 = straight down, 135 = strong left slant; 95 to 120 looks like wind blown rain
+  val SPEED_MIN_DP_PER_SEC = 180f // slowest drop (parallax depth)
+  val SPEED_MAX_DP_PER_SEC = 360f // fastest drop (foreground)
   val STREAK_LENGTH_MIN_DP = 14f
-  val STREAK_LENGTH_MAX_DP = 28f         // longer = more motion blur
-  val STROKE_WIDTH_DP = 1.1f             // thin (0.6) ↔ thick (3.0)
-  val RAIN_HEAD_COLOR = Color(0xFFB3E5FC)  // bright streak head
-  val RAIN_TAIL_ALPHA = 0.0f               // 0 = clean fade to transparent tail
-  val SPLASH_ENABLED = true                 // tiny splash mark on the bottom edge
+  val STREAK_LENGTH_MAX_DP = 28f // longer = more motion blur
+  val STROKE_WIDTH_DP = 1.1f // thin (0.6) ↔ thick (3.0)
+  val RAIN_HEAD_COLOR = Color(0xFFB3E5FC) // bright streak head
+  val RAIN_TAIL_ALPHA = 0.0f // 0 = clean fade to transparent tail
+  val SPLASH_ENABLED = true // tiny splash mark on the bottom edge
   val SPLASH_RADIUS_DP = 2.5f
   val BG_TOP = Color(0xFF0B1420)
   val BG_BOTTOM = Color(0xFF152033)

@@ -29,13 +29,11 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -44,7 +42,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -68,8 +65,10 @@ fun AnimationExample10() {
     animationSpec = tween(durationMillis = RACE_DURATION_MS, easing = LinearEasing),
     label = "noop",
   )
+
   // ↑ keep one driver alive even when individual rows recompose
-  @Suppress("UNUSED_VARIABLE") val tick = target
+  @Suppress("UNUSED_VARIABLE")
+  val tick = target
 
   val entries = listOf(
     EasingEntry("LinearEasing", LinearEasing, Color(0xFFEF5350)),

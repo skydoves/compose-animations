@@ -26,8 +26,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -47,18 +47,18 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import kotlin.math.abs
 import kotlinx.coroutines.launch
+import kotlin.math.abs
 
 @Composable
 fun AnimationExample13() {
-  val SWIPE_THRESHOLD_FRACTION = 0.3f  // 0.1 (easy) ↔ 0.6 (hard)
-  val ROTATION_FACTOR = 0.15f  // degrees per pixel
-  val FLING_STIFFNESS = 300f  // spring stiffness when snapping back
-  val FLING_DURATION_MS = 300  // off screen exit duration
+  val SWIPE_THRESHOLD_FRACTION = 0.3f // 0.1 (easy) ↔ 0.6 (hard)
+  val ROTATION_FACTOR = 0.15f // degrees per pixel
+  val FLING_STIFFNESS = 300f // spring stiffness when snapping back
+  val FLING_DURATION_MS = 300 // off screen exit duration
 
   val CARD_COLORS = listOf(
-    Color(0xFFEF5350),  // try Color(0xFFFF6B9D)
+    Color(0xFFEF5350), // try Color(0xFFFF6B9D)
     Color(0xFF42A5F5),
     Color(0xFF66BB6A),
     Color(0xFFFFCA28),
@@ -100,7 +100,10 @@ fun AnimationExample13() {
                 .fillMaxWidth(0.8f)
                 .height(300.dp)
                 .offset { IntOffset(0, yOffset) }
-                .graphicsLayer { scaleX = scale; scaleY = scale },
+                .graphicsLayer {
+                  scaleX = scale
+                  scaleY = scale
+                },
               colors = CardDefaults.cardColors(containerColor = CARD_COLORS[peekIndex]),
             ) {
               Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {

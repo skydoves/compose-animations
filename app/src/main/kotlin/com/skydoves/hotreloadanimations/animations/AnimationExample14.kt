@@ -45,19 +45,19 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import kotlin.math.cos
-import kotlin.math.sin
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlin.math.cos
+import kotlin.math.sin
 
 @Composable
 fun AnimationExample14() {
-  val ITEM_COUNT = 4            // try 3 (sparse) ↔ 8 (crowded)
-  val RADIUS_DP = 110f          // distance from center
-  val STAGGER_MS = 50L          // delay between satellites (0 = simultaneous)
-  val SPRING_STIFFNESS = 500f   // 100 (lazy) ↔ 1500 (snappy)
-  val SPRING_DAMPING = 0.55f    // 0.3 (very bouncy) ↔ 1.0 (no overshoot)
-  val ARC_DEG = 180f            // 180 = half circle, 360 = full circle
+  val ITEM_COUNT = 4 // try 3 (sparse) ↔ 8 (crowded)
+  val RADIUS_DP = 110f // distance from center
+  val STAGGER_MS = 50L // delay between satellites (0 = simultaneous)
+  val SPRING_STIFFNESS = 500f // 100 (lazy) ↔ 1500 (snappy)
+  val SPRING_DAMPING = 0.55f // 0.3 (very bouncy) ↔ 1.0 (no overshoot)
+  val ARC_DEG = 180f // 180 = half circle, 360 = full circle
 
   val palette = listOf(
     Color(0xFFEF5350),

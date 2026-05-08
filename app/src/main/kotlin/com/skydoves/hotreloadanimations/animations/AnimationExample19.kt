@@ -46,23 +46,23 @@ import kotlin.random.Random
 
 @Composable
 fun AnimationExample19() {
-  val ORB_COUNT = 16                          // 2 (sparse) ↔ 12 (rich aurora)
-  val ORB_GLOW_RADIUS_DP = 70f              // 80 (small spots) ↔ 400 (dominating washes)
-  val ORBIT_RADIUS_MIN_DP = 30f              // 0 (orbs sit still) ↔ 200 (huge sweeps)
+  val ORB_COUNT = 16 // 2 (sparse) ↔ 12 (rich aurora)
+  val ORB_GLOW_RADIUS_DP = 70f // 80 (small spots) ↔ 400 (dominating washes)
+  val ORBIT_RADIUS_MIN_DP = 30f // 0 (orbs sit still) ↔ 200 (huge sweeps)
   val ORBIT_RADIUS_MAX_DP = 140f
-  val ANGULAR_SPEED_MIN = 0.15f              // rad/sec, small = slow drift
-  val ANGULAR_SPEED_MAX = 0.55f              // large = energetic swirl
-  val VERTICAL_SQUASH = 0.6f                 // 1 (circles) ↔ 0.2 (very elliptical)
-  val HUE_ROTATION_SPEED = 14f               // deg/sec, 0 (static colors) ↔ 60 (rainbow churn)
+  val ANGULAR_SPEED_MIN = 0.15f // rad/sec, small = slow drift
+  val ANGULAR_SPEED_MAX = 0.55f // large = energetic swirl
+  val VERTICAL_SQUASH = 0.6f // 1 (circles) ↔ 0.2 (very elliptical)
+  val HUE_ROTATION_SPEED = 14f // deg/sec, 0 (static colors) ↔ 60 (rainbow churn)
   val PALETTE = listOf(
-    Color(0xFFEBE361),  // magenta
-    Color(0xFF00E5FF),  // cyan
-    Color(0xFF9251D8),  // purple
-    Color(0xFFEC7DF0),  // pink
-    Color(0xFF18FFFF),  // aqua
+    Color(0xFFEBE361), // magenta
+    Color(0xFF00E5FF), // cyan
+    Color(0xFF9251D8), // purple
+    Color(0xFFEC7DF0), // pink
+    Color(0xFF18FFFF), // aqua
   )
   val BG_COLOR = Color(0xFF0B0E1A)
-  val MID_STOP = 0.42f                       // controls glow falloff shape
+  val MID_STOP = 0.42f // controls glow falloff shape
   val MID_ALPHA = 0.55f
 
   val density = LocalDensity.current
@@ -118,7 +118,8 @@ fun AnimationExample19() {
           .fillMaxSize()
           .graphicsLayer(compositingStrategy = CompositingStrategy.Offscreen),
       ) {
-        @Suppress("UNUSED_EXPRESSION") tick
+        @Suppress("UNUSED_EXPRESSION")
+        tick
 
         drawRect(color = BG_COLOR, size = size)
 

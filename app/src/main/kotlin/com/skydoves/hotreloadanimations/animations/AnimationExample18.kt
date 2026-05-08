@@ -46,23 +46,23 @@ import kotlin.random.Random
 
 @Composable
 fun AnimationExample18() {
-  val ballCount = 7                      // 3 (sparse) ↔ 14 (chaos)
-  val ballRadiusMinDp = 28f              // small balls
-  val ballRadiusMaxDp = 52f              // big balls, variation matters
-  val glowRadiusMult = 2.2f              // 1.2 (crisp) ↔ 4.0 (heavy fusion)
-  val maxSpeedDpPerSec = 90f             // slow lava lamp ↔ frantic
-  val driftNoise = 50f                   // 0 (linear) ↔ 200 (jittery)
+  val ballCount = 7 // 3 (sparse) ↔ 14 (chaos)
+  val ballRadiusMinDp = 28f // small balls
+  val ballRadiusMaxDp = 52f // big balls, variation matters
+  val glowRadiusMult = 2.2f // 1.2 (crisp) ↔ 4.0 (heavy fusion)
+  val maxSpeedDpPerSec = 90f // slow lava lamp ↔ frantic
+  val driftNoise = 50f // 0 (linear) ↔ 200 (jittery)
   val palette = listOf(
     Color(0xFF69F0AE),
     Color(0xFF00BCD4),
     Color(0xFF7C4DFF),
     Color(0xFFFF4081),
   )
-  val bgColor = Color(0xFF080812)        // dark shows glow best
-  val showInnerCore = true               // false = pure soft blobs
-  val innerCoreFraction = 0.35f          // size of the crisp inner core
-  val gradientMidStop = 0.45f            // 0.2 (sharp) ↔ 0.8 (very soft halo)
-  val gradientMidAlpha = 0.70f           // alpha at the mid stop
+  val bgColor = Color(0xFF080812) // dark shows glow best
+  val showInnerCore = true // false = pure soft blobs
+  val innerCoreFraction = 0.35f // size of the crisp inner core
+  val gradientMidStop = 0.45f // 0.2 (sharp) ↔ 0.8 (very soft halo)
+  val gradientMidAlpha = 0.70f // alpha at the mid stop
 
   Column(
     modifier = Modifier.fillMaxWidth(),
@@ -104,7 +104,13 @@ fun AnimationExample18() {
         val rng = Random(0xF1A5C0L)
         while (true) {
           withFrameNanos { now ->
-            val dt = if (lastNanos == 0L) 0f else ((now - lastNanos) / 1_000_000_000f).coerceAtMost(0.05f)
+            val dt = if (lastNanos ==
+              0L
+            ) {
+              0f
+            } else {
+              ((now - lastNanos) / 1_000_000_000f).coerceAtMost(0.05f)
+            }
             lastNanos = now
             if (dt > 0f) {
               for (b in balls) {

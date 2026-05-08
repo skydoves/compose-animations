@@ -45,23 +45,23 @@ import kotlin.math.sin
 
 @Composable
 fun AnimationExample17() {
-  val LAYER_COUNT = 4                       // 1 (single line) ↔ 14 (deep ocean)
-  val BASE_FREQUENCY = 0.010f               // 0.003 (slow rolling) ↔ 0.05 (choppy)
-  val BASE_AMPLITUDE_DP = 18f               // 8 (calm) ↔ 80 (storm)
-  val BASE_PHASE_SPEED = 2.2f               // 0.2 (slow drift) ↔ 4.0 (rapid)
-  val FREQ_RAMP = 0.18f                     // each layer's freq multiplier increment
-  val AMPL_FALLOFF = 0.08f                  // each layer's amplitude reduction
-  val PHASE_RAMP = 0.35f                    // phase speed ramp per layer (parallax)
-  val SECONDARY_RATIO = 2.7f                // second harmonic frequency multiplier
-  val SECONDARY_AMP = 0.35f                 // 0 (clean sines) ↔ 1.5 (chaotic)
+  val LAYER_COUNT = 4 // 1 (single line) ↔ 14 (deep ocean)
+  val BASE_FREQUENCY = 0.010f // 0.003 (slow rolling) ↔ 0.05 (choppy)
+  val BASE_AMPLITUDE_DP = 18f // 8 (calm) ↔ 80 (storm)
+  val BASE_PHASE_SPEED = 2.2f // 0.2 (slow drift) ↔ 4.0 (rapid)
+  val FREQ_RAMP = 0.18f // each layer's freq multiplier increment
+  val AMPL_FALLOFF = 0.08f // each layer's amplitude reduction
+  val PHASE_RAMP = 0.35f // phase speed ramp per layer (parallax)
+  val SECONDARY_RATIO = 2.7f // second harmonic frequency multiplier
+  val SECONDARY_AMP = 0.35f // 0 (clean sines) ↔ 1.5 (chaotic)
   val LAYER_COLOR_START = Color(0xFF7EC9EB) // front wave
-  val LAYER_COLOR_END = Color(0xFF1A237E)   // back wave
+  val LAYER_COLOR_END = Color(0xFF1A237E) // back wave
   val LAYER_ALPHA_FRONT = 0.85f
   val LAYER_ALPHA_BACK = 0.25f
   val BG_TOP = Color(0xFF0A0E27)
   val BG_BOTTOM = Color(0xFFBFC2ED)
-  val BASELINE_FRACTION = 0.55f             // 0.3 (waves on top) ↔ 0.85 (almost full)
-  val SAMPLE_STEP_PX = 5f                   // lower = smoother but slower
+  val BASELINE_FRACTION = 0.55f // 0.3 (waves on top) ↔ 0.85 (almost full)
+  val SAMPLE_STEP_PX = 5f // lower = smoother but slower
 
   var time by remember { mutableStateOf(0f) }
   LaunchedEffect(Unit) {

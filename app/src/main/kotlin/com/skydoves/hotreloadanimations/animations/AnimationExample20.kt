@@ -41,21 +41,21 @@ import kotlin.math.sin
 
 @Composable
 fun AnimationExample20() {
-  val PENDULUM_COUNT = 18                         // 5 (sparse) ↔ 30 (dense rainbow wave)
-  val SYNC_PERIOD_SEC = 30f                       // 10 (frantic) ↔ 60 (slow contemplation)
-  val BASE_OSCILLATIONS = 20                      // swings the slowest pendulum makes per sync
-  val MAX_ANGLE_DEG = 32f                         // 10 (subtle) ↔ 45 (dramatic swings)
-  val PIVOT_TOP_FRACTION = 0.05f                  // vertical position of the pivot row
-  val PENDULUM_LENGTH_FRACTION = 0.78f            // length as fraction of canvas height
-  val BOB_RADIUS_DP = 11f                         // ball size
-  val STRING_WIDTH_DP = 1.5f                      // string thickness
-  val STRING_COLOR = Color(0xFF555560)            // dim string
-  val SUPPORT_BAR_COLOR = Color(0xFF888892)       // top support bar
-  val COLOR_FIRST = Color(0xFFFFD740)             // leftmost pendulum color
-  val COLOR_LAST = Color(0xFFE040FB)              // rightmost pendulum color
-  val BG_COLOR = Color(0xFF101015)                // dark canvas background
-  val TRAIL_LENGTH = 18                           // 0 (no trail) ↔ 60 (heavy trail)
-  val TRAIL_ALPHA_HEAD = 0.55f                    // brightness of newest trail dot
+  val PENDULUM_COUNT = 18 // 5 (sparse) ↔ 30 (dense rainbow wave)
+  val SYNC_PERIOD_SEC = 30f // 10 (frantic) ↔ 60 (slow contemplation)
+  val BASE_OSCILLATIONS = 20 // swings the slowest pendulum makes per sync
+  val MAX_ANGLE_DEG = 32f // 10 (subtle) ↔ 45 (dramatic swings)
+  val PIVOT_TOP_FRACTION = 0.05f // vertical position of the pivot row
+  val PENDULUM_LENGTH_FRACTION = 0.78f // length as fraction of canvas height
+  val BOB_RADIUS_DP = 11f // ball size
+  val STRING_WIDTH_DP = 1.5f // string thickness
+  val STRING_COLOR = Color(0xFF555560) // dim string
+  val SUPPORT_BAR_COLOR = Color(0xFF888892) // top support bar
+  val COLOR_FIRST = Color(0xFFFFD740) // leftmost pendulum color
+  val COLOR_LAST = Color(0xFFE040FB) // rightmost pendulum color
+  val BG_COLOR = Color(0xFF101015) // dark canvas background
+  val TRAIL_LENGTH = 18 // 0 (no trail) ↔ 60 (heavy trail)
+  val TRAIL_ALPHA_HEAD = 0.55f // brightness of newest trail dot
 
   val density = LocalDensity.current
   val bobRadiusPx = with(density) { BOB_RADIUS_DP.dp.toPx() }
